@@ -1,0 +1,31 @@
+[
+  {
+    "$match": {
+      "active": true
+    }
+  },
+  {
+    "$lookup": {
+      "from": "subscription",
+      "let": {
+        "memberReference": "$_id"
+      },
+      "pipeline": [
+        {
+          "$match": {
+            "active": true,
+            "$eq": ["$member.reference", "$$memberReference"]
+          }
+        }
+      ],
+      "as": "activeSubscribers"
+    }
+  },
+  {
+    "$match": {
+      "activeSubscribers": {
+        "$ne": []
+      }
+    }
+  }
+]

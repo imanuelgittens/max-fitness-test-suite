@@ -1,0 +1,10 @@
+[
+  {
+    "$match": {
+      "active": false
+    }
+  },
+  {
+    "$count": "totalInactiveMembers"
+  }
+]

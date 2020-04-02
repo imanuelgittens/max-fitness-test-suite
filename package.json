@@ -1,0 +1,19 @@
+{
+  "name": "max-fitness-test-suite",
+  "version": "1.0.0",
+  "description": "Practice using JS to write unit tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imanuelgittens/max-fitness-test-suite.git"
+  },
+  "author": "Imanuel Gittens",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imanuelgittens/max-fitness-test-suite/issues"
+  },
+  "homepage": "https://github.com/imanuelgittens/max-fitness-test-suite#readme"
+}
