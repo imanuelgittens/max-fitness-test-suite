@@ -4,7 +4,7 @@
   "description": "Practice using JS to write unit tests",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "mocha test/**/*.js"
   },
   "repository": {
     "type": "git",
