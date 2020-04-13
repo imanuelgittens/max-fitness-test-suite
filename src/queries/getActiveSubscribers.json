@@ -14,7 +14,9 @@
         {
           "$match": {
             "active": true,
-            "$eq": ["$member.reference", "$$memberReference"]
+            "$expr": {
+              "$eq": ["$member.reference", "$$memberReference"]
+            }
           }
         }
       ],
@@ -26,6 +28,11 @@
       "activeSubscribers": {
         "$ne": []
       }
+    }
+  },
+  {
+    "$project": {
+      "_id": 1
     }
   }
 ]
