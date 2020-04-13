@@ -10,7 +10,7 @@ const { dbUrl, createClient } = require('../../db');
 const getActiveSubscribers = require('../../../src/queries/getActiveSubscribers.json');
 
 describe('Query for finding all active subscribers', () => {
-  let db;
+  let db = null;
   describe('When a member is not active, the query', () => {
     before(async () => {
       ({ db } = await createClient(dbUrl));

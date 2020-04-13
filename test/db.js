@@ -6,6 +6,7 @@ async function createClient(url, options) {
   const cacheKey = url;
 
   // old url parser is deprecated
+  // unifiedTopology now required by MongoDB driver
   const connectionOpts = {
     ...options,
     useNewUrlParser: true,
